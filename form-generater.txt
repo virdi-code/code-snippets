@@ -1,0 +1,25 @@
+// Instructions to make a HTML form to be overlayed on an invoice to help operator filling it.
+
+1. generate form at https://www.tablesgenerator.com/html_tables
+    deselect first row is header.
+2. attach input element for every <td>, add minlength,maxlength, and id for every input element.
+3. remove padding,font-size, 
+    change overflow:clip
+4. different class for every column.
+
+
+
+
+attach jquery script:
+    $("#myInput").on("keydown", function(e) {
+    $("#copy").text(this.value);
+
+    var width = $("#copy").outerWidth();
+    console.log("w: " + width);
+
+    var code = e.keyCode ? e.keyCode : e.which;
+    if (width > 50 && code  !== 8 && code !== 49) {
+        return false;
+    }
+});
+
