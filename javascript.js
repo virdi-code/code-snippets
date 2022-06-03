@@ -157,9 +157,24 @@ document.getElementById("name-copy").onclick = function() {
 				}
 
 // #######################
+// fetch request 
+const data = { orderId: '{someNumber}' };
+
+fetch('url+orderId', {
+  headers: {
+    'Content-Type': 'application/json',
+  },
+})
+.then(response => response.json())
+.then(data => {
+  console.log('Success:', data);
+})
+.catch((error) => {
+  console.error('Error:', error);
+});
 
 
-
+/// ################ FETCH END.
 
 
 
