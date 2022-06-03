@@ -1,0 +1,103 @@
+// bad jquery code for reference. To be replaced.
+
+
+
+	function copyToClipboard(element) {
+	  var $temp = $("<input>");
+	  $("body").append($temp);
+	  $temp.val(element).select();
+	  document.execCommand("copy");
+	  $temp.remove();
+	}
+
+
+    jQuery(document).on('focusin',"#contactPerson",function (event) 
+						{ $("#contactPerson").val(''); });
+						
+						jQuery(document).on('focusin',"#mobileNo",function (event) 
+						{ $("#mobileNo").val(''); });
+						
+						jQuery(document).on('focusin',"#address",function (event) 
+						{ $("#address").val(''); });
+						
+						jQuery(document).on('focusin',"#zip",function (event) 
+						{ $("#zip").val(''); });
+						
+						jQuery(document).on('focusin',"#city",function (event) 
+						{ $("#city").val(''); });
+						
+						jQuery(document).on('focusin',"#province",function (event) 
+						{ $("#province").val(''); });
+						
+						jQuery(document).on('mousedown',"#contactPerson",function (event) 
+						{
+							switch (event.which) {
+								case 3:
+									console.log('Right Mouse button pressed.');
+									copyToClipboard(response.first_name + ' ' + response.last_name);
+									break;
+								default:
+									console.log('You have a strange Mouse!');
+							}
+						});
+						
+						jQuery(document).on('mousedown',"#mobileNo",function (event) 
+						{
+							switch (event.which) {
+								case 3:
+									console.log('Right Mouse button pressed.');
+									copyToClipboard(response.phone);
+									break;
+								default:
+									console.log('You have a strange Mouse!');
+							}
+						});
+						
+						jQuery(document).on('mousedown',"#address",function (event) 
+						{
+							switch (event.which) {
+								case 3:
+									console.log('Right Mouse button pressed.');
+									copyToClipboard(response.address_1);
+									break;
+								default:
+									console.log('You have a strange Mouse!');
+							}
+						});
+						
+						jQuery(document).on('mousedown',"#zip",function (event) 
+						{
+							switch (event.which) {
+								case 3:
+									console.log('Right Mouse button pressed.');
+									copyToClipboard(response.postcode);
+									break;
+								default:
+									console.log('You have a strange Mouse!');
+							}
+						});
+						
+						jQuery(document).on('mousedown',"#city",function (event) 
+						{
+							switch (event.which) {
+								case 3:
+									console.log('Right Mouse button pressed.');
+									copyToClipboard(response.city);
+									break;
+								default:
+									console.log('You have a strange Mouse!');
+							}
+						});
+						
+						jQuery(document).on('mousedown',"#province",function (event) 
+						{
+							switch (event.which) {
+								case 3:
+									console.log('Right Mouse button pressed.');
+									copyToClipboard(response.state);
+									break;
+								default:
+									console.log('You have a strange Mouse!');
+							}
+						});
+						
