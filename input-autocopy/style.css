@@ -1,0 +1,13 @@
+body {
+    background-color: darkgrey;
+
+}
+
+div {
+    margin: auto;
+}
+
+.city-copy {
+    background-color: floralwhite;
+    color: rgb(0, 0, 0);
+}
